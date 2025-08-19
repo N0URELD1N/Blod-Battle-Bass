@@ -34,14 +34,7 @@ const rewards = [
   // أضف المزيد كما تريد
 ];
 
-function login() {
-  const Scrap = document.getElementById("ScrapCode").value.trim();
-  if (Scrap) {
-    localStorage.setItem("ScrapCode", scrap);
-    localStorage.setItem("xp", xpFromFile); // ← نجبر التحديث من الملف
-    showDashboard();
-  }
-}
+
 
 function showDashboard() {
   document.getElementById("loginScreen").style.display = "none";
