@@ -42,9 +42,7 @@ function showDashboard() {
   updateUI();
 }
 
-function getLevel(xp) {
-  return Math.floor(xp / 500) + 1;
-}
+
 
 function updateUI() {
   const xp = parseInt(localStorage.getItem("xp")) || 0;
