@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blod Battle Bass</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+<body>
+
+
+<header class="main-header">
+
+  <nav>
+    <button onclick="togglePoints()">Xp System</button>
+
+    <button onclick="togglePremium()">Battle Bass Premium</button>
+
+    <button onclick="toggleweekly()">Weekly Taskes </button>
+
+  </nav>
+</header>
+
+<div id="pointsPopup" class="popup-box">
+  <h3> Xp System </h3>
+  <ul>
+    <li>ATM Robbery 40xp</li>
+    <li>Store Robbery 80xp</li>
+    <li>House Robbery 150xp</li>
+    <li>Fleeca Bank Robbery 250xp</li>
+    <li>Jewelry Robbery 400xp</li>
+    <li>Attending the gangs meeting 50xp</li>
+  </ul>
+</div>
+
+<div id="premiumPopup" class="popup-box">
+  <h3> : مميزات البتل باس البريميوم </h3>
+  <ul>
+    <li>فتح مكافآت إضافية</li>
+    <li>تخصيص المكافآت</li>
+    <li>الوصول المبكر للمستويات</li>
+  </ul>
+  <p><strong>السعر:</strong> 10﷼ </p>
+  <button onclick="showIBAN()">IBAN</button>
+  <p id="ibanField" class="iban">SA6780000539608015664634</p>
+</div>
+
+
+
+<div id="weeklyPopup" class="popup-box">
+  <h3> Weekly Tasks: </h3>
+  <ul>
+    <li>Soon …</li>
+
+
+  </ul>
+</div>
+
+
+
+<h2 id="pageTitle">BLOD GANG Battle Bass</h2>
+
+  <div class="login-screen" id="loginScreen">
+    <h2>تسجيل الدخول</h2>
+    <input type="text" id="scrapCode" placeholder="أدخل رمز Scrap">
+    <button onclick="login()">دخول</button>
+  </div>
+
+  <div class="dashboard" id="dashboard" style="display: none;">
+    <div class="player-info">
+      <p>XP: <span id="xp">0</span></p>
+      <p>المستوى: <span id="level">1</span></p>
+    </div>
+
+    <div class="battle-pass" id="battlePass">
+      <!-- المكافآت تُولد من JS -->
+    </div>
+  </div>
+
+
+
+
+<script>
+function togglePoints() {
+  const popup = document.getElementById("pointsPopup");
+  popup.style.display = popup.style.display === "none" ? "block" : "none";
+}
+
+function toggleweekly() {
+  const popup = document.getElementById("weeklyPopup");
+  popup.style.display = popup.style.display === "none" ? "block" : "none";
+}
+
+
+function togglePremium() {
+  const popup = document.getElementById("premiumPopup");
+  popup.style.display = popup.style.display === "none" ? "block" : "none";
+}
+
+function showIBAN() {
+  document.getElementById("ibanField").style.display = "block";
+}
+
+
+
+</script>
+
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> LTRP — جميع الحقوق محفوظة</p>
+</footer>
+
+<style>
+  .site-footer{
+    text-align: center;
+    padding: 12px;
+    background: dark gray;  /* خلفية أزرق غامق */
+    color: #e2e8f0;       /* نص فاتح */
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Naskh Arabic", sans-serif;
+    font-size: 0.95rem;
+  }
+</style>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+  <script src="script.js"></script>
+</body>
+</html>
