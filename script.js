@@ -75,12 +75,7 @@ function updateUI() {
   });
 }
 
-window.onload = () => {
-  if (localStorage.getItem("scrapCode")) {
-    localStorage.setItem("xp", xpFromFile); // ← تحديث XP دائمًا من الملف
-    showDashboard();
-  }
-};
+
 
 
 
