@@ -37,7 +37,7 @@ const rewards = [
 
 
 function showDashboard() {
-  document.getElementById("loginScreen").style.display = "none";
+
   document.getElementById("dashboard").style.display = "block";
   updateUI();
 }
