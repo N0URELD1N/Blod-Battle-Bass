@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ar">
 <head>
@@ -8,20 +7,13 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-
-
 <body>
 
-
 <header class="main-header">
-
   <nav>
     <button onclick="togglePoints()">Xp System</button>
-
     <button onclick="togglePremium()">Battle Bass Premium</button>
-
     <button onclick="toggleweekly()">Weekly Taskes </button>
-
   </nav>
 </header>
 
@@ -41,48 +33,33 @@
   <h3> : مميزات البتل باس البريميوم </h3>
   <ul>
     <li>فتح مكافآت إضافية</li>
-    <li>تخصيص المكافآت</li>n
+    <li>تخصيص المكافآت</li>
     <li>الوصول المبكر للمستويات</li>
   </ul>
   <p><strong>السعر:</strong> 10﷼ </p>
   <button onclick="showIBAN()">IBAN</button>
-  <p id="ibanField" class="iban">SA6780000539608015664634</p>
+  <p id="ibanField" class="iban" style="display:none;">SA6780000539608015664634</p>
 </div>
-
-
 
 <div id="weeklyPopup" class="popup-box">
   <h3> Weekly Tasks: </h3>
   <ul>
     <li>Soon …</li>
-
-
   </ul>
 </div>
 
-
-
 <h2 id="pageTitle">BLOD GANG Battle Bass</h2>
 
+<div class="dashboard" id="dashboard">
+  <div class="player-info">
+    <p>XP: <span id="xp">0</span></p>
+    <p>المستوى: <span id="level">1</span></p>
+  </div>
 
-
-
-
-
-
-
-    <div class="player-info">
-      <p>XP: <span id="xp">0</span></p>
-      <p>المستوى: <span id="level">1</span></p>
-    </div>
-
-    <div class="battle-pass" id="battlePass">
-      <!-- المكافآت تُولد من JS -->
-    </div>
-  
-
-
-
+  <div class="battle-pass" id="battlePass">
+    <!-- المكافآت تُولد من JS -->
+  </div>
+</div>
 
 <script>
 function togglePoints() {
@@ -95,7 +72,6 @@ function toggleweekly() {
   popup.style.display = popup.style.display === "none" ? "block" : "none";
 }
 
-
 function togglePremium() {
   const popup = document.getElementById("premiumPopup");
   popup.style.display = popup.style.display === "none" ? "block" : "none";
@@ -104,11 +80,7 @@ function togglePremium() {
 function showIBAN() {
   document.getElementById("ibanField").style.display = "block";
 }
-
-
-
 </script>
-
 
 <footer class="site-footer">
   <p>© <span id="year"></span> LTRP — جميع الحقوق محفوظة</p>
@@ -118,8 +90,8 @@ function showIBAN() {
   .site-footer{
     text-align: center;
     padding: 12px;
-    background: dark gray;  /* خلفية أزرق غامق */
-    color: #e2e8f0;       /* نص فاتح */
+    background: darkgray;  /* خلفية رمادي داكن */
+    color: #e2e8f0;       
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Naskh Arabic", sans-serif;
     font-size: 0.95rem;
   }
@@ -129,6 +101,6 @@ function showIBAN() {
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
